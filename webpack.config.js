@@ -13,7 +13,7 @@ module.exports = {
   mode: mode,
 
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     assetModuleFilename: "assets/[hash][ext][query]",
   },
 
@@ -60,7 +60,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist')
+      directory: path.join(__dirname, 'public')
     },
     hot: true,
   },
