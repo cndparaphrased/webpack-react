@@ -1,21 +1,69 @@
 @use "variables";
 
+// =========================
+// TYPOGRAPHY
+// =========================
+p {
+  line-height: 1.5;
+}
+
+
+
+// =========================
+// MAIN STYLES 
+// =========================
 body {
-  margin: 0;
-  background-color: variables.$bg;
-  color: var(--text);
-} 
+  position: relative;
+}
+// body::before {
+//   content: '';
+//   position: fixed;
+//   top: 0px;
+//   left: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   border: 50px solid var(--white);
+// }
 
 main {
+  height: 100vh;
+}
+
+.wrapper {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+
+section {
   display: flex;
-  flex-direction: column;
+  height: calc(100vh - 50px);
+  background: linear-gradient(110deg, var(--blue) 61%, var(--ltgrey) 39%);
+}
+
+h1 {
+  font-family: var(--sansFont);
+  font-size: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  color: var(--black);
 }
 
-button {
-  font-size: 1.5rem;
+span {
+  color: var(--blue);
 }
 
-ul {
-  list-style-image: url("../images/image.svg");
+.paragraph {
+  background-color: var(--ltgrey);
+  font-size: 30px;
+  font-family: var(--sansFont);
+  color: var(--black);
+  padding: 20px;
+
+  .grey {
+    color: var(--drkgrey);
+    font-family: var(--serifFont);
+    font-size: 16px;
+  }
 }

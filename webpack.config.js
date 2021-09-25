@@ -36,6 +36,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset',
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
@@ -50,6 +54,7 @@ module.exports = {
     new MiniCssExtractPlugin(), 
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      favicon: "./src/images/favicon.png",
     }),
   ],
 
