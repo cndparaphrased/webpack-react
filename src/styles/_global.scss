@@ -13,57 +13,85 @@ p {
 // MAIN STYLES 
 // =========================
 body {
-  position: relative;
-}
-// body::before {
-//   content: '';
-//   position: fixed;
-//   top: 0px;
-//   left: 0px;
-//   right: 0px;
-//   bottom: 0px;
-//   border: 50px solid var(--white);
-// }
-
-main {
-  height: 100vh;
-}
-
-.wrapper {
-  width: calc(100% - 100px);
-  margin: 0 auto;
-}
-
-section {
-  display: flex;
-  height: calc(100vh - 50px);
-  background: linear-gradient(110deg, var(--blue) 61%, var(--ltgrey) 39%);
-}
-
-h1 {
   font-family: var(--sansFont);
-  font-size: 200px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--black);
-}
+  font-size: 1.6rem;
 
-span {
-  color: var(--blue);
-}
+    &::before,
+    &::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    width: calc(100vw - 45px);
+    height: 45px;
+    background-color: var(--white);
+    z-index: 1;
+  }
 
-.paragraph {
-  background-color: var(--ltgrey);
-  font-size: 30px;
-  font-family: var(--sansFont);
-  color: var(--black);
-  padding: 20px;
+  &::before {
+    top: 0;
+  }
 
-  .grey {
-    color: var(--drkgrey);
-    font-family: var(--serifFont);
-    font-size: 16px;
+  &::after {
+    bottom: 0;
   }
 }
+
+// =========================
+// SOCIAL ICONS
+// =========================
+.social {
+  height: calc(100vh - 45px);
+  padding-top: 45px;
+  padding-right: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__items {
+    margin: 2px 0;
+  }
+
+  &__icon {
+    font-size: 16px;
+    color: var(--black);
+
+    &.fa-instagram {
+      font-weight: 600;
+    }
+  }
+}
+
+// =========================
+// FOOTER
+// =========================
+// .footer {
+//   background-color: var(--white);
+//   color: var(--drkgrey);
+//   width: 100%;
+//   padding: 45px 0 90px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: flex-end;
+//   font-size: 1.2rem;
+
+//   &__logo, &__link, &__copy {
+//     opacity: 50%;
+//   }
+
+//   &__logo {
+//     height: 16px;
+//   }
+
+//   &__link {
+//     color: var(--drkgrey);
+//     margin-top: 16px;
+
+//     &:hover, &:focus {
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+

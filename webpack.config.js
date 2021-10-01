@@ -67,6 +67,6 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'public')
     },
-    hot: true,
+    //hot: true,
   },
 };
