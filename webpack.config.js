@@ -15,6 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     assetModuleFilename: "assets/[hash][ext][query]",
+    publicPath: "/",
   },
 
   module: {
@@ -64,6 +65,7 @@ module.exports = {
 
   devtool: "source-map",
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, 'public')
     },
