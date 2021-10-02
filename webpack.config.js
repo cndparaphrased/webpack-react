@@ -63,7 +63,7 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
 
-  devtool: "source-map",
+  //devtool: "source-map",
   devServer: {
     historyApiFallback: true,
     static: {
